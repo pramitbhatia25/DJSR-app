@@ -1,7 +1,7 @@
 import 'package:DJSRacing/widgets/Slide_Transition.dart';
 import 'package:flutter/material.dart';
 import 'screens/Racing.dart';
-import 'package:DJSRacing/images/intro_images.dart';
+import 'package:DJSRacing/lists/home_Images.dart';
 import 'package:flutter/cupertino.dart';
 
 
@@ -53,10 +53,11 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.red),
         title: Text(
-          'Home',
+          '          Home',
           style: TextStyle(
             color: Colors.red,
             fontSize: 20.0,
+            fontFamily: 'Montserrat',
             letterSpacing: 2.0,
             fontWeight: FontWeight.bold,
           ),
@@ -378,7 +379,7 @@ class _HomeState extends State<Home> {
               endIndent: 50,
             ),
             Text(
-              "DJS Racing is the Formula Student team of Dwarkadas J. Sanghvi College of Engineering, Vile Parle, Mumbai. We are a team of 120 students representing our college at Formula Student Competitions in India as well as abroad, where we design and manufacture Formula style racecar prototypes. Since the year 2012, our team has been constantly pushing the limits in the field of combustion. The world is changing, with companies making strides towards sustainable development. We at DJSR embrace change, and have thus made the decision to go fully electric from this season.",
+              "DJS Racing is the Formula Student team of Dwarkadas J. Sanghvi College of Engineering, Vile Parle, Mumbai.\nWe are a team of 120 students representing our college at Formula Student Competitions in India as well as abroad, where we design and manufacture Formula style racecar prototypes.\nSince the year 2012, our team has been constantly pushing the limits in the field of combustion.\nThe world is changing, with companies making strides towards sustainable development.\nWe at DJSR embrace change, and have thus made the decision to go fully electric from this season.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color:Colors.white,
@@ -390,7 +391,7 @@ class _HomeState extends State<Home> {
             ),
             SizedBox(height:40.0),
             Container(
-              height: 100.0,
+              height: 90,
               width: MediaQuery.of(context).size.width,
               color:Colors.deepOrange[500],
               child:Column(
@@ -404,7 +405,7 @@ class _HomeState extends State<Home> {
                       color: Colors.white,
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.bold,
-                      fontSize: 30.0,
+                      fontSize: 25.0,
                     ),
                   ),
                 ],
