@@ -10,7 +10,7 @@ class Slide extends PageRouteBuilder{
   Animation<double> secanimation,
       Widget child) {
 
-  animation = CurvedAnimation(parent: animation, curve: Curves.easeInOutSine);
+  animation = CurvedAnimation(parent: animation, curve: Curves.easeInOutCirc);
   Animation<Offset> custom = Tween<Offset>(
   begin: Offset(1.0, 0.0),
   end: Offset(0.0,0.0)
