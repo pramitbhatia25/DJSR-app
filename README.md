@@ -1,6 +1,6 @@
 # DJSRacing
 
-A new Flutter project.
+This is a Flutter team projet for DJS Racing Team, at DJSCE.
 
 ## Getting Started
 
