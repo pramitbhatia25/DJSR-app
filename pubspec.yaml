@@ -23,6 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  scroll_app_bar: ^1.0.3
+  flutter_parallax: "^0.1.2"
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -50,6 +52,7 @@ flutter:
     - lib/images/w.jpg
     - lib/images/carr.jpg
     - lib/images/formulastudenttitle.jpg
+    - lib/images/a.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

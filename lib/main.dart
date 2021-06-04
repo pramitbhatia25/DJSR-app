@@ -1,5 +1,7 @@
 import 'package:DJSRacing/widgets/Slide_Transition.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_parallax/flutter_parallax.dart';
+import 'package:scroll_app_bar/scroll_app_bar.dart';
 import 'screens/onboardPage_Racing.dart';
 import 'package:DJSRacing/lists/home_Images.dart';
 import 'package:flutter/cupertino.dart';
@@ -31,6 +33,7 @@ class _HomeState extends State<Home> {
   double pageOffset = 0;
   int currentpage = 0;
   int drawerno = 0;
+  final appbcontroller = ScrollController();
 
 
   @override
@@ -44,17 +47,18 @@ class _HomeState extends State<Home> {
     });
   }
   TextEditingController email = new TextEditingController();
-
+  String Appbartext = 'Home';
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
-      appBar: AppBar(
+      appBar: ScrollAppBar(
+        controller: appbcontroller,
         iconTheme: IconThemeData(color: Colors.red),
         title: Text(
-          '          Home',
+          '$Appbartext',
           style: TextStyle(
             color: Colors.red,
             fontSize: 20.0,
@@ -90,7 +94,9 @@ class _HomeState extends State<Home> {
               children: <Widget>[
                 RaisedButton.icon(
                   onPressed: () {
+                    Navigator.pop(context);
                     setState(() {
+                      Appbartext = 'Home';
                       drawerno = 0;
                     });
                   },
@@ -123,7 +129,9 @@ class _HomeState extends State<Home> {
                 ),
                 RaisedButton.icon(
                   onPressed: () {
+                    Navigator.pop(context);
                     setState(() {
+                      Appbartext = 'Formula Student';
                       drawerno = 1;
                     });
                   },
@@ -156,7 +164,9 @@ class _HomeState extends State<Home> {
                 ),
                 RaisedButton.icon(
                   onPressed: () {
+                    Navigator.pop(context);
                     setState(() {
+                      Appbartext = 'Cars';
                       drawerno = 2;
                     });
                   },
@@ -189,7 +199,9 @@ class _HomeState extends State<Home> {
                 ),
                 RaisedButton.icon(
                   onPressed: () {
+                    Navigator.pop(context);
                     setState(() {
+                      Appbartext = 'Our Team';
                       drawerno = 3;
                     });
                   },
@@ -222,7 +234,9 @@ class _HomeState extends State<Home> {
                 ),
                 RaisedButton.icon(
                   onPressed: () {
+                    Navigator.pop(context);
                     setState(() {
+                      Appbartext = 'Mission';
                       drawerno = 4;
                     });
                   },
@@ -232,7 +246,7 @@ class _HomeState extends State<Home> {
                   label: Padding(
                     padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
                     child: Text(
-                      "Mission Statement",
+                      "Mission",
                       style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontSize: 20.0,
@@ -255,7 +269,9 @@ class _HomeState extends State<Home> {
                 ),
                 RaisedButton.icon(
                   onPressed: () {
+                    Navigator.pop(context);
                     setState(() {
+                      Appbartext = 'Sponsors';
                       drawerno = 5;
                     });
                   },
@@ -288,7 +304,9 @@ class _HomeState extends State<Home> {
                 ),
                 RaisedButton.icon(
                   onPressed: () {
+                    Navigator.pop(context);
                     setState(() {
+                      Appbartext = 'Contact Us!';
                       drawerno = 6;
                     });
                   },
@@ -298,7 +316,7 @@ class _HomeState extends State<Home> {
                   label: Padding(
                     padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
                     child: Text(
-                      "Media Handles",
+                      "Contact Us",
                       style: TextStyle(
                         fontSize: 20.0,
                         color: Colors.greenAccent[400],
@@ -327,8 +345,10 @@ class _HomeState extends State<Home> {
     else if(drawerno == 1)
       return formulaStudent();
   }
+
   Widget home(){
     return SingleChildScrollView(
+      controller: appbcontroller,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
@@ -343,7 +363,7 @@ class _HomeState extends State<Home> {
               },
               itemBuilder: (context,i){
                 return Transform.scale(
-                  scale: 1.05,
+                  scale: 1,
                   child: Container(
                     padding: EdgeInsets.only(left:15, top:20, right: 15.0),
                     child: Column(
@@ -571,30 +591,31 @@ class _HomeState extends State<Home> {
 
   Widget formulaStudent(){
     return SingleChildScrollView(
+      controller: appbcontroller,
       child: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Container(
-              height: MediaQuery.of(context).size.height*.5,
-              width: MediaQuery.of(context).size.width*.9,
-              margin: EdgeInsets.all(15.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.red),
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(30),
-                child: InteractiveViewer(
-                  panEnabled: true,
-                  minScale: 1,
+            SizedBox(height:40),
+            Parallax.inside(
+              child: Container(
+                height: MediaQuery.of(context).size.height*.65,
+                width: MediaQuery.of(context).size.width,
+                margin: EdgeInsets.only(top: 15.0, bottom: 15.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.red),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
                   child: Image.asset(
-                    'lib/images/formulastudenttitle.jpg',
-                    fit: BoxFit.fitHeight,
+                    'lib/images/a.jpg',
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
+              mainAxisExtent: 400.0,
             ),
             SizedBox(height: 40.0),
             Container(
@@ -644,10 +665,10 @@ class _HomeState extends State<Home> {
                     "About The Competition",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontFamily: 'Montserrat',
                       color:Colors.black,
                       letterSpacing: 3.0,
                       fontWeight: FontWeight.bold,
+                      fontFamily: 'Montserrat',
                       fontSize: 30.0,
                     ),
                   ),
