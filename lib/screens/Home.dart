@@ -33,6 +33,13 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [Colors.black, Colors.red, Colors.black]
+                ),
+              ),
               padding: EdgeInsets.only(top: 5, bottom:5),
               height:370.0,
               child: PageView.builder(

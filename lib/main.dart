@@ -84,7 +84,6 @@ class _HomeState extends State<Home> {
         ],
       ),
       backgroundColor: Colors.black,
-      resizeToAvoidBottomPadding: false,
       drawer: Drawer(
         child: Container(
           padding: EdgeInsets.only(top: 60.0, bottom: 60.0),
