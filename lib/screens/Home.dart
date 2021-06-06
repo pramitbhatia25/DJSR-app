@@ -1,7 +1,6 @@
 import 'dart:ffi';
 
-import 'package:video_player/video_player.dart';
-import 'package:DJSRacing/lists/home_Images.dart';
+git import 'package:DJSRacing/lists/home_Images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../main.dart';
