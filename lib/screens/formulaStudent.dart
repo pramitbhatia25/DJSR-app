@@ -56,7 +56,7 @@ class _formulaState extends State<formula> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
-                        'lib/images/a.jpg',
+                        'lib/images/formulastudent.jpg',
                         fit: BoxFit.cover,
                       ),
                     ),

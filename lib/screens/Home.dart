@@ -1,4 +1,6 @@
+import 'dart:ffi';
 
+import 'package:video_player/video_player.dart';
 import 'package:DJSRacing/lists/home_Images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -135,13 +137,12 @@ class _HomePageState extends State<HomePage> {
               height: 20.0,
             ),
             Container(
-              height: 200.0,
+              height: 800.0,
               width: MediaQuery.of(context).size.width,
-              color: Colors.black,
+              color: Colors.transparent,
               child:Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  // add video
                   SizedBox(height: 10.0),
                 ],
               ),

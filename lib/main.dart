@@ -42,13 +42,7 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    pageController = PageController(viewportFraction:1);
     super.initState();
-    pageController.addListener(() {
-      setState(() {
-        pageOffset = pageController.page;
-      });
-    });
   }
 
 

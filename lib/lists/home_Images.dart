@@ -16,7 +16,7 @@ List<Map> paintings = [
     'right': 0.0,
   },
   {
-    'image': 'lib/images/a.jpg',
+    'image': 'lib/images/formulastudent.jpg',
     'name': 'Formula Student 101',
     'left': 80.0,
     'size': 20.0,
