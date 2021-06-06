@@ -1,6 +1,6 @@
 import 'dart:ffi';
 
-git import 'package:DJSRacing/lists/home_Images.dart';
+import 'package:DJSRacing/lists/home_Images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../main.dart';
