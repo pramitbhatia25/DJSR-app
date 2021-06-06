@@ -1,8 +1,11 @@
+import 'dart:developer';
 import 'dart:ffi';
 
 import 'package:DJSRacing/lists/home_Images.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import '../main.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,12 +21,16 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     pageController = PageController(viewportFraction:1);
     super.initState();
+
+
     pageController.addListener(() {
       setState(() {
         pageOffset = pageController.page;
       });
     });
   }
+
+
 
 
   @override
@@ -142,7 +149,6 @@ class _HomePageState extends State<HomePage> {
               child:Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(height: 10.0),
                 ],
               ),
             ),
