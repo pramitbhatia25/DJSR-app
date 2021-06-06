@@ -7,25 +7,8 @@ This repositiory contains the code for DJS Racing Application.
 ## Some Screens From The Application
 
 <p float="left">
-    <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/onboarding.png"  /> <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/djsabtus-removebg-preview.png"  /> 
-  <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/aboutus.png"  /> <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/drawer.png" /> 
-  <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/formstudentpage.png" /> <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/formstudentcomp.png" /> 
-  
-  <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/dynamic.png" />
+    <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/onboarding.png"  /> <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/djsabtus-removebg-preview.png"  />
+    <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/aboutus.png"  /> <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/drawer.png" />
+    <img src="https://github.com/pramitbhatia25/Flutter-Project/blob/main/lib/screensforgithub/dynamic.png" />
  
 </p>
-
-
-
-
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
