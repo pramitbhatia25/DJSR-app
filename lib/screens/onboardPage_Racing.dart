@@ -41,14 +41,11 @@ class _RacingState extends State<Racing> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Text(
-                "DJS RACING",
-                style: TextStyle(
-                  fontFamily: 'Montserrat',
-                  color:Colors.red,
-                  letterSpacing: 3.0,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30.0,
+              Container(
+                height: 40,
+                padding: EdgeInsets.all(0),
+                child: Image.asset(
+                  'lib/images/djsr.png'
                 ),
               ),
               Divider(
@@ -58,17 +55,17 @@ class _RacingState extends State<Racing> {
                 indent: 50,
                 endIndent: 50,
               ),
-              Text(
-                "We Are SPEED...",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: 'Montserrat',
-                  color:Colors.white,
-                  letterSpacing: 4.0,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15.0,
-                ),
-              ),
+              // Text(
+              //   "We Are SPEED...",
+              //   textAlign: TextAlign.center,
+              //   style: TextStyle(
+              //     fontFamily: 'Montserrat',
+              //     color:Colors.white,
+              //     letterSpacing: 4.0,
+              //     fontWeight: FontWeight.bold,
+              //     fontSize: 15.0,
+              //   ),
+              // ),
               Container(
                 padding: EdgeInsets.only(top: 5, bottom:5),
                 height:MediaQuery.of(context).size.height*0.8,
@@ -85,7 +82,7 @@ class _RacingState extends State<Racing> {
                       children: [
                         Container(
                           height:MediaQuery.of(context).size.height*0.7,
-                          width: MediaQuery.of(context).size.width*0.99,
+                          width: MediaQuery.of(context).size.width*0.9,
                           margin: EdgeInsets.only(top:15.0, bottom: 15.0, right: 5.0, left: 5.0 ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),

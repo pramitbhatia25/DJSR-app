@@ -88,7 +88,7 @@ class _formulaState extends State<formula> {
                     endIndent: 50,
                   ),
                   Text(
-                    "The world’s biggest competition for engineers is HERE!.\nEvery year competitions are held all across the globe. Founded by the Society of Automotive Engineers in 1981, the first competition in Europe took place in 1998.\nAt present, there are more than 600 teams from universities all over the world competing with their self-constructed race cars.\nThe goal is to develop and provide a platform for student engineers to experience, build, and learn.\nIt offers a unique way to test students’ theoretical knowledge in a practical context.\nStudents gain and develop skills such as engineering, project management and team work.\nThe winner is not necessarily the team with the fastest car, but the one with the best package regarding construction, performance, financial planning and sales arguments.",
+                    "The world’s biggest competition for engineers is HERE!\nEvery year competitions are held all across the globe. Founded by the Society of Automotive Engineers in 1981, the first competition in Europe took place in 1998.\nAt present, there are more than 600 teams from universities all over the world competing with their self-constructed race cars.\nThe goal is to develop and provide a platform for student engineers to experience, build, and learn.\nIt offers a unique way to test students’ theoretical knowledge in a practical context.\nStudents gain and develop skills such as engineering, project management and team work.\nThe winner is not necessarily the team with the fastest car, but the one with the best package regarding construction, performance, financial planning and sales arguments.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color:Colors.white,
@@ -420,13 +420,6 @@ class _formulaState extends State<formula> {
                       ),
                     ),
                   ),
-                  Divider(
-                    thickness: 2.0,
-                    color: Colors.red,
-                    height: 20.0,
-                    indent: 50,
-                    endIndent: 50,
-                  ),
                   SizedBox(height: 30),
                   custom.ExpansionTile(
                     headerBackgroundColor: Colors.black,
@@ -620,13 +613,6 @@ class _formulaState extends State<formula> {
                       ),
                     ),
                   ),
-                  Divider(
-                    thickness: 2.0,
-                    color: Colors.red,
-                    height: 20.0,
-                    indent: 50,
-                    endIndent: 50,
-                  ),
                   SizedBox(height: 30),
                   custom.ExpansionTile(
                     headerBackgroundColor: Colors.black,
@@ -724,6 +710,8 @@ class _formulaState extends State<formula> {
                     indent: 50,
                     endIndent: 50,
                   ),
+                  SizedBox(height: 50),
+                  emailbox(),
                 ],
               ),
             ),
@@ -731,7 +719,139 @@ class _formulaState extends State<formula> {
         ),
       ),
     );
-  } }
+  }
+  Widget emailbox()
+  {
+    return Container(
+      height: 250.0,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Colors.red,Colors.red[900], Colors.black],
+        ),
+      ),
+      child:Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Container(
+            color: Colors.black,
+            child: Column(
+              children: <Widget>[
+                Divider(
+                  thickness: 5.0,
+                  color: Colors.red,
+                  height: 20.0,
+                ),
+                Text(
+                  "SUBSCRIBE TO OUR NEWSLETTER",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25.0,
+                  ),
+                ),
+                Divider(
+                  thickness: 5.0,
+                  color: Colors.red,
+                  height: 20.0,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 10.0),
+          Row(
+            children: [
+              SizedBox(width: MediaQuery.of(context).size.width * .025),
+              Container(
+                height:70,
+                width: MediaQuery.of(context).size.width * .69375,
+                decoration: BoxDecoration(
+                  color: Colors.orange[100],
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: TextField(
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                  controller: email,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    contentPadding: EdgeInsets.only(top:20.0, bottom:20.0),
+                    icon: Padding(
+                      padding: const EdgeInsets.fromLTRB(10.0, 0.0, 0.0, 0.0),
+                      child: Icon(Icons.alternate_email_outlined, color: Colors.deepOrange[500]),
+                    ),
+                    hintText: "Email Address",
+                  ),
+                ),
+              ),
+              SizedBox(width: MediaQuery.of(context).size.width * .025),
+              Container(
+                width: MediaQuery.of(context).size.width * .23125,
+                height: 70,
+                child: Builder(
+                  builder: (context) =>
+                      Center(
+                        child: RaisedButton(
+                          color: Colors.orange[400],
+                          onPressed: () {
+                            if(email.text == "pramitbhatia25@gmail.com" ||email.text == "1")
+                            {
+                              Scaffold.of(context).showSnackBar(SnackBar(
+                                backgroundColor: Colors.black,
+                                content: Text('Success', style: TextStyle(color: Colors.red, letterSpacing: 1.0, fontSize: 20.0, fontWeight: FontWeight.w800)),
+                                duration: Duration(seconds: 2),
+                              ),
+                              );
+                            }
+                            else
+                            {
+                              Scaffold.of(context).showSnackBar(SnackBar(
+                                backgroundColor: Colors.black,
+                                content: Text('Incorrect Details Entered', style: TextStyle(color: Colors.red, letterSpacing: 1.0, fontSize: 20.0, fontWeight: FontWeight.w800)),
+                                duration: Duration(seconds: 2),
+                              ),
+                              );
+                            }
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+                            child: Text(
+                              "GO!",
+                              style: TextStyle(
+                                height: 1.0,
+                                fontSize: 25.0,
+                                color: Colors.black,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(20.0),
+                          ),
+                        ),
+                      ),
+                ),
+              ),
+              SizedBox(width: MediaQuery.of(context).size.width * .025),
+            ],
+          ),
+          SizedBox(height:20.0),
+          Text('@CopyRight DJS RACING 2021', style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold, fontFamily: 'Montserrat')),
+        ],
+      ),
+    );
+  }
+
+}
 
 
 

@@ -1,6 +1,6 @@
 List<Map> paintings = [
   {
-    'image': 'lib/images/w.jpg',
+    'image': 'lib/images/c.jpg',
     'name': '',
     'left': 7.0,
     'size': 40.0,
