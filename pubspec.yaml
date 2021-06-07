@@ -52,10 +52,16 @@ flutter:
   assets:
     - lib/images/w.jpg
     - lib/images/carr.jpg
-    - lib/images/c.jpg
+    - lib/images/c.png
     - lib/images/djsr.png
     - lib/images/formulastudenttitle.jpg
     - lib/images/formulastudent.jpg
+    - lib/images/djscars/djs01.JPG
+    - lib/images/djscars/djs02.JPG
+    - lib/images/djscars/djs03.JPG
+    - lib/images/djscars/djs04.JPG
+    - lib/images/djscars/djs05.JPG
+    - lib/images/djscars/djsev.JPG
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

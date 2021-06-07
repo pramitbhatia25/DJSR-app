@@ -14,6 +14,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
+    currentpage = 0;
     pageController = PageController(viewportFraction:1);
     super.initState();
 
@@ -121,7 +122,7 @@ class _HomePageState extends State<HomePage> {
               endIndent: 50,
             ),
             Text(
-              "DJS Racing is the Formula Student team of Dwarkadas J. Sanghvi College of Engineering, Vile Parle, Mumbai.\nWe are a team of 120 students representing our college at Formula Student Competitions in India as well as abroad, where we design and manufacture Formula style racecar prototypes.\nSince the year 2012, our team has been constantly pushing the limits in the field of combustion.\nThe world is changing, with companies making strides towards sustainable development.\nWe at DJSR embrace change, and have thus made the decision to go fully electric from this season.",
+              "DJS Racing is the Formula Student team of Dwarkadas J. Sanghvi College of Engineering, Vile Parle, Mumbai.\n\nWe are a team of 120 students representing our college at Formula Student Competitions in India as well as abroad, where we design / manufacture Formula style race-car prototypes.\n\nSince the year 2012, our team has been constantly pushing the limits in the field of combustion.\n\nThe world is changing, and with companies making strides towards sustainable development, we at DJSRacing embrace change, and have thus made the decision to go fully electric from this season.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 color:Colors.white,

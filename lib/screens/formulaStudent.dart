@@ -48,21 +48,24 @@ class _formulaState extends State<formula> {
               child: Parallax.inside(
                 child: Center(
                   child: Container(
-                    height: MediaQuery.of(context).size.height*.7,
-                    width: MediaQuery.of(context).size.width*0.8,
+                    height:MediaQuery.of(context).size.height*0.6,
+                    width: MediaQuery.of(context).size.width*0.95,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.asset(
-                        'lib/images/formulastudent.jpg',
-                        fit: BoxFit.cover,
+                    child: Transform.scale(
+                      scale: 1,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Image.asset(
+                          'lib/images/formulastudent.jpg',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
                 ),
-                mainAxisExtent: MediaQuery.of(context).size.height*0.7,
+                mainAxisExtent: MediaQuery.of(context).size.height*0.65,
               ),
             ),
             SizedBox(height: 40.0),
@@ -88,14 +91,13 @@ class _formulaState extends State<formula> {
                     endIndent: 50,
                   ),
                   Text(
-                    "The world’s biggest competition for engineers is HERE!\nEvery year competitions are held all across the globe. Founded by the Society of Automotive Engineers in 1981, the first competition in Europe took place in 1998.\nAt present, there are more than 600 teams from universities all over the world competing with their self-constructed race cars.\nThe goal is to develop and provide a platform for student engineers to experience, build, and learn.\nIt offers a unique way to test students’ theoretical knowledge in a practical context.\nStudents gain and develop skills such as engineering, project management and team work.\nThe winner is not necessarily the team with the fastest car, but the one with the best package regarding construction, performance, financial planning and sales arguments.",
-                    textAlign: TextAlign.center,
+                    "\nThe world’s biggest competition for engineers is HERE! \n\nEvery year, Formula Student competitions are held all across the globe. Founded by the Society of Automotive Engineers in 1981, the first competition in Europe took place in 1998. At present, there are more than 600 teams from universities all over the world competing with their self-constructed race cars. \n\nThe goal? To develop and provide a platform for student engineers to experience, build, and learn. It offers a unique way to test students’ theoretical knowledge in a practical context. \n\nStudents gain and develop skills such as engineering, project management and team work. The winner is not necessarily the team with the fastest car, but the one with the best package regarding construction, performance, financial planning and sales arguments.",
                     style: TextStyle(
                       color:Colors.white,
                       height: 1.375,
                       fontFamily: 'Montserrat',
                       letterSpacing: 1.0,
-                      fontSize: 20.0,
+                      fontSize: 18.0,
                     ),
                   ),
                 ],
@@ -416,7 +418,7 @@ class _formulaState extends State<formula> {
                         letterSpacing: 3.0,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Montserrat',
-                        fontSize: 30.0,
+                        fontSize: 25.0,
                       ),
                     ),
                   ),
@@ -429,7 +431,7 @@ class _formulaState extends State<formula> {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Montserrat',
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     ),
                     children: [
@@ -440,7 +442,7 @@ class _formulaState extends State<formula> {
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Montserrat',
-                            fontSize: 20,
+                            fontSize: 18,
                           ),
                         ),
                       ),
@@ -461,7 +463,7 @@ class _formulaState extends State<formula> {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Montserrat',
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     ),
                     children: [
@@ -472,7 +474,7 @@ class _formulaState extends State<formula> {
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Montserrat',
-                            fontSize: 20,
+                            fontSize: 18,
                           ),
                         ),
                       ),
@@ -493,7 +495,7 @@ class _formulaState extends State<formula> {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Montserrat',
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     ),
                     children: [
@@ -504,7 +506,7 @@ class _formulaState extends State<formula> {
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Montserrat',
-                            fontSize: 20,
+                            fontSize: 18,
                           ),
                         ),
                       ),
@@ -525,7 +527,7 @@ class _formulaState extends State<formula> {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Montserrat',
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     ),
                     children: [
@@ -536,7 +538,7 @@ class _formulaState extends State<formula> {
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Montserrat',
-                            fontSize: 20,
+                            fontSize: 18,
                           ),
                         ),
                       ),
@@ -557,7 +559,7 @@ class _formulaState extends State<formula> {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Montserrat',
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     ),
                     children: [
@@ -568,7 +570,7 @@ class _formulaState extends State<formula> {
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Montserrat',
-                            fontSize: 20,
+                            fontSize: 18,
                           ),
                         ),
                       ),
@@ -609,7 +611,7 @@ class _formulaState extends State<formula> {
                         letterSpacing: 3.0,
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Montserrat',
-                        fontSize: 30.0,
+                        fontSize: 25.0,
                       ),
                     ),
                   ),
@@ -622,7 +624,7 @@ class _formulaState extends State<formula> {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Montserrat',
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     ),
                     children: [
@@ -633,7 +635,7 @@ class _formulaState extends State<formula> {
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Montserrat',
-                            fontSize: 20,
+                            fontSize: 18,
                           ),
                         ),
                       ),
@@ -654,7 +656,7 @@ class _formulaState extends State<formula> {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Montserrat',
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     ),
                     children: [
@@ -665,7 +667,7 @@ class _formulaState extends State<formula> {
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Montserrat',
-                            fontSize: 20,
+                            fontSize: 18,
                           ),
                         ),
                       ),
@@ -686,7 +688,7 @@ class _formulaState extends State<formula> {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Montserrat',
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     ),
                     children: [
@@ -697,7 +699,7 @@ class _formulaState extends State<formula> {
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Montserrat',
-                            fontSize: 20,
+                            fontSize: 18,
                           ),
                         ),
                       ),
