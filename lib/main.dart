@@ -1,6 +1,7 @@
 import 'package:DJSRacing/screens/Home.dart';
 import 'package:DJSRacing/screens/cars.dart';
 import 'package:DJSRacing/screens/formulaStudent.dart';
+import 'package:DJSRacing/screens/sponsors.dart';
 import 'package:DJSRacing/widgets/Slide_Transition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_parallax/flutter_parallax.dart';
@@ -26,6 +27,7 @@ void main() {
       routes: {
         '/main': (context) => Home(),
         '/Racing': (context) => Racing(),
+        '/Sponsors': (context) => Sponsors(),
 
       }
   ));
@@ -341,6 +343,8 @@ class _HomeState extends State<Home> {
       return formula();
     else if(drawerno == 2)
       return cars();
+    else if(drawerno == 5)
+      return Sponsors();
 
   }
 

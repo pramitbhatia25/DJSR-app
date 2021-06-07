@@ -39,9 +39,11 @@ class _carsState extends State<cars> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Image.asset(
-                    'lib/images/djscars/djs01.JPG',
-                    fit: BoxFit.contain,
+                  child: InteractiveViewer(
+                    child: Image.asset(
+                      'lib/images/djscars/djs01.JPG',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
                 Divider(
@@ -121,7 +123,7 @@ class _carsState extends State<cars> {
               children: <Widget>[
                 Divider(
                   thickness: 5.0,
-                  color: Colors.red,
+                  color: Colors.blue,
                   height: 10.0,
                 ),
                 Container(
@@ -129,14 +131,16 @@ class _carsState extends State<cars> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Image.asset(
-                    'lib/images/djscars/djs02.JPG',
-                    fit: BoxFit.contain,
+                  child: InteractiveViewer(
+                    child: Image.asset(
+                      'lib/images/djscars/djs02.JPG',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
                 Divider(
                   thickness: 5.0,
-                  color: Colors.red,
+                  color: Colors.blue,
                   height: 10.0,
                 ),
                 SizedBox(height: 30),
@@ -153,14 +157,14 @@ class _carsState extends State<cars> {
                 ),
                 Divider(
                   thickness: 2.0,
-                  color: Colors.red,
+                  color: Colors.blue,
                   height: 20.0,
                   indent: 90,
                   endIndent: 90,
                 ),
                 SizedBox(height: 20),
                 Text(
-                  "The first Car! Started us on a journey of building out our ideas.",
+                  "The second Car we made. Inspired by the past, Inspiring the future.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color:Colors.white,
@@ -179,7 +183,7 @@ class _carsState extends State<cars> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.black, Colors.red,Colors.red,Colors.red,  Colors.black],
+                        colors: [Colors.black, Colors.blue,Colors.blue,Colors.blue,  Colors.black],
                       )
                   ),
                   child: Padding(
@@ -211,7 +215,7 @@ class _carsState extends State<cars> {
               children: <Widget>[
                 Divider(
                   thickness: 5.0,
-                  color: Colors.red,
+                  color: Colors.yellow,
                   height: 10.0,
                 ),
                 Container(
@@ -219,14 +223,16 @@ class _carsState extends State<cars> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Image.asset(
-                    'lib/images/djscars/djs03.JPG',
-                    fit: BoxFit.contain,
+                  child: InteractiveViewer(
+                    child: Image.asset(
+                      'lib/images/djscars/djs03.JPG',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
                 Divider(
                   thickness: 5.0,
-                  color: Colors.red,
+                  color: Colors.yellow,
                   height: 10.0,
                 ),
                 SizedBox(height: 30),
@@ -243,14 +249,14 @@ class _carsState extends State<cars> {
                 ),
                 Divider(
                   thickness: 2.0,
-                  color: Colors.red,
+                  color: Colors.yellow,
                   height: 20.0,
                   indent: 90,
                   endIndent: 90,
                 ),
                 SizedBox(height: 20),
                 Text(
-                  "The first Car! Started us on a journey of building out our ideas.",
+                  "The third car incorporated a smaller and more efficient design.",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color:Colors.white,
@@ -269,7 +275,7 @@ class _carsState extends State<cars> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.black, Colors.red,Colors.red,Colors.red,  Colors.black],
+                        colors: [Colors.black, Colors.yellow,Colors.yellow,Colors.yellow,  Colors.black],
                       )
                   ),
                   child: Padding(
@@ -301,7 +307,7 @@ class _carsState extends State<cars> {
               children: <Widget>[
                 Divider(
                   thickness: 5.0,
-                  color: Colors.red,
+                  color: Colors.pinkAccent,
                   height: 10.0,
                 ),
                 Container(
@@ -309,14 +315,16 @@ class _carsState extends State<cars> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Image.asset(
-                    'lib/images/djscars/djs04.JPG',
-                    fit: BoxFit.contain,
+                  child: InteractiveViewer(
+                    child: Image.asset(
+                      'lib/images/djscars/djs04.JPG',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
                 Divider(
                   thickness: 5.0,
-                  color: Colors.red,
+                  color: Colors.pinkAccent,
                   height: 10.0,
                 ),
                 SizedBox(height: 30),
@@ -333,14 +341,14 @@ class _carsState extends State<cars> {
                 ),
                 Divider(
                   thickness: 2.0,
-                  color: Colors.red,
+                  color: Colors.pinkAccent,
                   height: 20.0,
                   indent: 90,
                   endIndent: 90,
                 ),
                 SizedBox(height: 20),
                 Text(
-                  "The first Car! Started us on a journey of building out our ideas.",
+                  "The fourth car! Fast and Cost-Efficient : Thats what we want!",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color:Colors.white,
@@ -359,7 +367,7 @@ class _carsState extends State<cars> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.black, Colors.red,Colors.red,Colors.red,  Colors.black],
+                        colors: [Colors.black, Colors.pinkAccent,Colors.pinkAccent,Colors.pinkAccent,  Colors.black],
                       )
                   ),
                   child: Padding(
@@ -391,7 +399,7 @@ class _carsState extends State<cars> {
               children: <Widget>[
                 Divider(
                   thickness: 5.0,
-                  color: Colors.red,
+                  color: Colors.green,
                   height: 10.0,
                 ),
                 Container(
@@ -399,14 +407,16 @@ class _carsState extends State<cars> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Image.asset(
-                    'lib/images/djscars/djsev.JPG',
-                    fit: BoxFit.contain,
+                  child: InteractiveViewer(
+                    child: Image.asset(
+                      'lib/images/djscars/djsev.JPG',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
                 Divider(
                   thickness: 5.0,
-                  color: Colors.red,
+                  color: Colors.green,
                   height: 10.0,
                 ),
                 SizedBox(height: 30),
@@ -423,14 +433,14 @@ class _carsState extends State<cars> {
                 ),
                 Divider(
                   thickness: 2.0,
-                  color: Colors.red,
+                  color: Colors.green,
                   height: 20.0,
                   indent: 90,
                   endIndent: 90,
                 ),
                 SizedBox(height: 20),
                 Text(
-                  "The first Car! Started us on a journey of building out our ideas.",
+                  "The fifth, but first EV car. Green Green Speed Machine!",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color:Colors.white,
@@ -449,7 +459,7 @@ class _carsState extends State<cars> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.black, Colors.red,Colors.red,Colors.red,  Colors.black],
+                        colors: [Colors.black, Colors.greenAccent,Colors.greenAccent,Colors.greenAccent,  Colors.black],
                       )
                   ),
                   child: Padding(
@@ -481,7 +491,7 @@ class _carsState extends State<cars> {
               children: <Widget>[
                 Divider(
                   thickness: 5.0,
-                  color: Colors.red,
+                  color: Colors.orange,
                   height: 10.0,
                 ),
                 Container(
@@ -489,14 +499,16 @@ class _carsState extends State<cars> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Image.asset(
-                    'lib/images/djscars/djs05.JPG',
-                    fit: BoxFit.contain,
+                  child: InteractiveViewer(
+                    child: Image.asset(
+                      'lib/images/djscars/djs05.JPG',
+                      fit: BoxFit.contain,
+                    ),
                   ),
                 ),
                 Divider(
                   thickness: 5.0,
-                  color: Colors.red,
+                  color: Colors.orange,
                   height: 10.0,
                 ),
                 SizedBox(height: 30),
@@ -513,14 +525,14 @@ class _carsState extends State<cars> {
                 ),
                 Divider(
                   thickness: 2.0,
-                  color: Colors.red,
+                  color: Colors.orange,
                   height: 20.0,
                   indent: 90,
                   endIndent: 90,
                 ),
                 SizedBox(height: 20),
                 Text(
-                  "The first Car! Started us on a journey of building out our ideas.",
+                  "The latest Car! Faster, Cheaper, Greener: VRROOM!",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color:Colors.white,
@@ -539,7 +551,7 @@ class _carsState extends State<cars> {
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
-                        colors: [Colors.black, Colors.red,Colors.red,Colors.red,  Colors.black],
+                        colors: [Colors.black, Colors.orange,Colors.orange,Colors.orange,  Colors.black],
                       )
                   ),
                   child: Padding(
