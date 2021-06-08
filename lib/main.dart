@@ -1,13 +1,12 @@
 import 'package:DJSRacing/screens/Home.dart';
+import 'package:DJSRacing/screens/Team.dart';
 import 'package:DJSRacing/screens/cars.dart';
 import 'package:DJSRacing/screens/formulaStudent.dart';
 import 'package:DJSRacing/screens/sponsors.dart';
-import 'package:DJSRacing/widgets/Slide_Transition.dart';
+import 'package:DJSRacing/screens/supportus.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_parallax/flutter_parallax.dart';
 import 'package:scroll_app_bar/scroll_app_bar.dart';
 import 'screens/onboardPage_Racing.dart';
-import 'package:DJSRacing/lists/home_Images.dart';
 import 'package:flutter/cupertino.dart';
 
 PageController pageController;
@@ -28,7 +27,8 @@ void main() {
         '/main': (context) => Home(),
         '/Racing': (context) => Racing(),
         '/Sponsors': (context) => Sponsors(),
-
+        '/Support': (context) => Support(),
+        '/Team': (context) => Team(),
       }
   ));
 }
@@ -233,43 +233,8 @@ class _HomeState extends State<Home> {
                   onPressed: () {
                     Navigator.pop(context);
                     setState(() {
-                      Appbartext = 'Mission';
-                      drawerno = 4;
-                    });
-                  },
-                  icon: Icon(Icons.arrow_forward, size: 25.0),
-                  textColor: Colors.red,
-                  color: Colors.black,
-                  label: Padding(
-                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-                    child: Text(
-                      "Mission",
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 20.0,
-                        color: Colors.greenAccent[400],
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
-                      ),
-                    ),
-                  ),
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(10.0),
-                  ),
-                ),
-                Divider(
-                  thickness: 2.0,
-                  color: Colors.red,
-                  height: 20.0,
-                  indent: 50,
-                  endIndent: 50,
-                ),
-                RaisedButton.icon(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    setState(() {
                       Appbartext = 'Sponsors';
-                      drawerno = 5;
+                      drawerno = 4;
                     });
                   },
                   icon: Icon(Icons.arrow_forward, size: 25.0),
@@ -303,8 +268,8 @@ class _HomeState extends State<Home> {
                   onPressed: () {
                     Navigator.pop(context);
                     setState(() {
-                      Appbartext = 'Contact Us!';
-                      drawerno = 6;
+                      Appbartext = 'Support Us!';
+                      drawerno = 5;
                     });
                   },
                   icon: Icon(Icons.arrow_forward, size: 25.0),
@@ -313,7 +278,7 @@ class _HomeState extends State<Home> {
                   label: Padding(
                     padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
                     child: Text(
-                      "Contact Us",
+                      "Support Us",
                       style: TextStyle(
                         fontSize: 20.0,
                         color: Colors.greenAccent[400],
@@ -343,9 +308,12 @@ class _HomeState extends State<Home> {
       return formula();
     else if(drawerno == 2)
       return cars();
-    else if(drawerno == 5)
+    else if(drawerno == 3)
+      return Team();
+    else if(drawerno == 4)
       return Sponsors();
-
+    else if(drawerno == 5)
+      return Support();
   }
 
   AnimatedContainer buildDot({int index}) {

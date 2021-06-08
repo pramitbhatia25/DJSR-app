@@ -25,7 +25,7 @@ dependencies:
     sdk: flutter
   scroll_app_bar: ^1.0.3
   flutter_parallax: "^0.1.2"
-
+  url_launcher: ^6.0.6
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -55,6 +55,7 @@ flutter:
     - lib/images/c.png
     - lib/images/djsr.png
     - lib/images/formulastudenttitle.jpg
+    - lib/images/supportimages/brochure.JPG
     - lib/images/formulastudent.jpg
     - lib/images/djscars/djs01.JPG
     - lib/images/djscars/djs02.JPG
@@ -62,6 +63,20 @@ flutter:
     - lib/images/djscars/djs04.JPG
     - lib/images/djscars/djs05.JPG
     - lib/images/djscars/djsev.JPG
+    - lib/images/sponsorimages/sponsor1.jpeg
+    - lib/images/sponsorimages/sponsor2.jpeg
+    - lib/images/sponsorimages/sponsor3.jpeg
+    - lib/images/sponsorimages/sponsor4.jpeg
+    - lib/images/sponsorimages/sponsorfixto.jpg
+    - lib/images/sponsorimages/fixtologo.jpg
+    - lib/images/supportimages/why1.jpg
+    - lib/images/supportimages/why2.jpg
+    - lib/images/supportimages/why3.jpg
+    - lib/images/supportimages/why4.jpg
+    - lib/images/supportimages/why5.jpg
+    - lib/images/supportimages/why6.jpg
+    - lib/images/supportimages/why7.jpg
+    - lib/images/supportimages/why8.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
