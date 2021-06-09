@@ -6,6 +6,7 @@ import 'package:DJSRacing/screens/sponsors.dart';
 import 'package:DJSRacing/screens/supportus.dart';
 import 'package:flutter/material.dart';
 import 'package:scroll_app_bar/scroll_app_bar.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'screens/onboardPage_Racing.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -69,12 +70,17 @@ class _HomeState extends State<Home> {
         elevation: 0.0,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.settings, color: Colors.red),
-            color: Colors.red,
-            iconSize: 30.0,
-            onPressed: () {
-              Scaffold.of(context).openEndDrawer();
-            },
+              icon: Icon(Icons.settings, color: Colors.red),
+              color: Colors.red,
+              iconSize: 30.0,
+              onPressed: () async {
+                const url = 'https://www.djs-racing.com';
+                if (await canLaunch(url)) {
+                  await launch(url);
+                } else {
+                  throw 'Could not launch $url';
+                }
+              }
           ),
           SizedBox(width: 20.0),
         ],

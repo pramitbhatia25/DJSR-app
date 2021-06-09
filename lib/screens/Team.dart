@@ -12,9 +12,8 @@ class Team extends StatefulWidget {
   _TeamState createState() => _TeamState();
 }
 
-String dropdownValue = 'Select Year';
-List<Map> decide = employees_2013_14;
-bool isexpanded = false;
+String dropdownValue = '2020 - 2021';
+List<Map> decide = employees_2020_21;
 
 class _TeamState extends State<Team> {
   @override
@@ -34,11 +33,11 @@ class _TeamState extends State<Team> {
                 ),
                 width: MediaQuery.of(context).size.width,
                 child: custom.ExpansionTile(
-                  initiallyExpanded: true,
+                  initiallyExpanded: false,
                   headerBackgroundColor: Colors.black,
                   iconColor: Colors.red,
                   title: Text(
-                    'Select An Year',
+                    '$dropdownValue',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.white,
@@ -74,8 +73,8 @@ class _TeamState extends State<Team> {
                               ),
                               onPressed: () {
                                 setState(() {
-                                  isexpanded = !isexpanded;
                                   decide = employees_2013_14;
+                                  dropdownValue = '2013 - 2014';
                                 });
                               },
                               child: Text('2013     -     2014',
@@ -105,6 +104,7 @@ class _TeamState extends State<Team> {
                               onPressed: () {
                                 setState(() {
                                   decide = employees_2014_16;
+                                  dropdownValue = '2014 - 2016';
                                 });
                               },
                               child: Text('2014     -     2016',
@@ -131,7 +131,12 @@ class _TeamState extends State<Team> {
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.transparent,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  dropdownValue = '2016 - 2017';
+                                  decide = employees_2016_17;
+                                });
+                              },
                               child: Text('2016     -     2017',
                                   style: TextStyle(
                                       color: Colors.greenAccent,
@@ -156,7 +161,12 @@ class _TeamState extends State<Team> {
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.transparent,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  decide = employees_2017_18;
+                                  dropdownValue = '2017 - 2018';
+                                });
+                              },
                               child: Text('2017     -     2018',
                                   style: TextStyle(
                                       color: Colors.greenAccent,
@@ -181,7 +191,12 @@ class _TeamState extends State<Team> {
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.transparent,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  dropdownValue = '2018 - 2019';
+                                  decide = employees_2018_19;
+                                });
+                              },
                               child: Text('2018     -     2019',
                                   style: TextStyle(
                                       color: Colors.greenAccent,
@@ -206,7 +221,12 @@ class _TeamState extends State<Team> {
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.transparent,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  dropdownValue = '2019 - 2020';
+                                  decide = employees_2019_20;
+                                });
+                              },
                               child: Text('2019     -     2020',
                                   style: TextStyle(
                                       color: Colors.greenAccent,
@@ -231,7 +251,12 @@ class _TeamState extends State<Team> {
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.transparent,
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                setState(() {
+                                  dropdownValue = '2020 - 2021';
+                                  decide = employees_2020_21;
+                                });
+                              },
                               child: Text('2020     -     2021',
                                   style: TextStyle(
                                       color: Colors.greenAccent,
@@ -250,7 +275,7 @@ class _TeamState extends State<Team> {
             ),
             SizedBox(height: 20),
             Container(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.of(context).size.height +100,
               width: MediaQuery.of(context).size.width,
               child: ListView.separated(
                 separatorBuilder: (BuildContext context, int index) =>
@@ -288,7 +313,7 @@ class _TeamState extends State<Team> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 50.0, top: 5),
+                        padding: const EdgeInsets.only(left: 30.0, top: 5),
                         child: Container(
                           decoration: BoxDecoration(
                             color: Colors.greenAccent,
@@ -304,7 +329,7 @@ class _TeamState extends State<Team> {
                 },
               ),
             ),
-            SizedBox(height: 60),
+            SizedBox(height: 200),
           ],
         ),
       ),

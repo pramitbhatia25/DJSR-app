@@ -116,7 +116,7 @@ class _RacingState extends State<Racing> {
               ),
               RaisedButton.icon(
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                       context, Slide(widget: Home()));
                 },
                 icon: Icon(Icons.arrow_forward_ios, size: 30.0),
