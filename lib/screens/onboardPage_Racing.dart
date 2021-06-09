@@ -1,4 +1,4 @@
-import 'package:DJSRacing/lists/home_Images.dart';
+import 'package:DJSRacing/lists/onboard_Images.dart';
 import 'package:DJSRacing/widgets/Slide_Transition.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -75,7 +75,7 @@ class _RacingState extends State<Racing> {
                       currentpage = value;
                     });
                   },
-                  itemCount: paintings.length,
+                  itemCount: onboardpaintings.length,
                   controller: pageController,
                   itemBuilder: (context,i){
                     return Column(
@@ -91,7 +91,7 @@ class _RacingState extends State<Racing> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Image.asset(
-                              paintings[i]['image'],
+                              onboardpaintings[i]['image'],
                               height: 100,
                               width: 100,
                               fit: BoxFit.cover,
@@ -105,7 +105,7 @@ class _RacingState extends State<Racing> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children:
                             List.generate(
-                              paintings.length,
+                              onboardpaintings.length,
                                   (index) => buildDot(index: index),
                             ),
                         ),

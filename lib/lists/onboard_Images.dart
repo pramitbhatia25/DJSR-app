@@ -1,6 +1,6 @@
-List<Map> paintings = [
+List<Map> onboardpaintings = [
   {
-    'image': 'lib/images/w.jpg',
+    'image': 'lib/images/c.png',
     'name': '',
     'left': 7.0,
     'size': 40.0,
@@ -16,7 +16,7 @@ List<Map> paintings = [
     'right': 0.0,
   },
   {
-    'image': 'lib/images/formulastudenttitle.jpg',
+    'image': 'lib/images/formulastudent.jpg',
     'name': 'Formula Student 101',
     'left': 80.0,
     'size': 20.0,
