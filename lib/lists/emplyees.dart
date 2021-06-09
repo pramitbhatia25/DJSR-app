@@ -1,27 +1,74 @@
-List<Map> paintings = [
+List<Map> employees_2013_14 = [
   {
     'image': 'lib/images/w.jpg',
-    'name': '',
-    'left': 7.0,
-    'size': 40.0,
-    'bottom': 8.0,
-    'right': 5.0,
+    'name': 'Pramit Bhatia',
   },
   {
     'image': 'lib/images/carr.jpg',
-    'name': 'Formula Student 101',
-    'left': 80.0,
-    'size': 20.0,
-    'bottom': 8.0,
-    'right': 0.0,
+    'name': 'Kaartik Bhatia',
   },
   {
     'image': 'lib/images/formulastudenttitle.jpg',
-    'name': 'Formula Student 101',
-    'left': 80.0,
-    'size': 20.0,
-    'bottom': 8.0,
-    'right': 0.0,
+    'name': 'Bhatia',
   },
-
+  {
+    'image': 'lib/images/w.jpg',
+    'name': 'Pramit Bhatia',
+  },
+  {
+    'image': 'lib/images/carr.jpg',
+    'name': 'Kaartik Bhatia',
+  },
+  {
+    'image': 'lib/images/formulastudenttitle.jpg',
+    'name': 'Bhatia',
+  }, {
+    'image': 'lib/images/w.jpg',
+    'name': 'Pramit Bhatia',
+  },
+  {
+    'image': 'lib/images/carr.jpg',
+    'name': 'Kaartik Bhatia',
+  },
+  {
+    'image': 'lib/images/formulastudenttitle.jpg',
+    'name': 'Bhatia',
+  },
+];
+List<Map> employees_2014_16 = [
+  {
+    'image': 'lib/images/w.jpg',
+    'name': 'Pramit Bhatia List 2',
+  },
+  {
+    'image': 'lib/images/carr.jpg',
+    'name': 'Kaartik Bhatia',
+  },
+  {
+    'image': 'lib/images/formulastudenttitle.jpg',
+    'name': 'Bhatia',
+  },
+  {
+    'image': 'lib/images/w.jpg',
+    'name': 'Pramit Bhatia',
+  },
+  {
+    'image': 'lib/images/carr.jpg',
+    'name': 'Kaartik Bhatia',
+  },
+  {
+    'image': 'lib/images/formulastudenttitle.jpg',
+    'name': 'Bhatia',
+  }, {
+    'image': 'lib/images/w.jpg',
+    'name': 'Pramit Bhatia',
+  },
+  {
+    'image': 'lib/images/carr.jpg',
+    'name': 'Kaartik Bhatia',
+  },
+  {
+    'image': 'lib/images/formulastudenttitle.jpg',
+    'name': 'Bhatia',
+  },
 ];

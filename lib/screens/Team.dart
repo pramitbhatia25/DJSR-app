@@ -1,7 +1,9 @@
+import 'package:DJSRacing/lists/emplyees.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:DJSRacing/lists/home_Images.dart';
 import 'package:flutter/material.dart';
 import '../main.dart';
+import 'package:DJSRacing/widgets/customexpansiontile.dart' as custom;
 
 class Team extends StatefulWidget {
   const Team({Key key}) : super(key: key);
@@ -11,6 +13,8 @@ class Team extends StatefulWidget {
 }
 
 String dropdownValue = 'Select Year';
+List<Map> decide = employees_2013_14;
+bool isexpanded = false;
 
 class _TeamState extends State<Team> {
   @override
@@ -20,55 +24,292 @@ class _TeamState extends State<Team> {
       child: SafeArea(
         child: Column(
           children: <Widget>[
-            SizedBox(height: 60),
-            Center(
-              child: Theme(
-                data: Theme.of(context).copyWith(
-                  canvasColor: Colors.redAccent,
+            SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.only(right: 20.0, left: 20),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  border: Border.all(color: Colors.red),
                 ),
-                child: DropdownButton(
-                  isExpanded: false,
-                  iconEnabledColor: Colors.white,
-                  iconDisabledColor: Colors.red,
-                  itemHeight: 80,
-                  value: dropdownValue,
-                  icon: Icon(Icons.arrow_drop_down_circle, color: Colors.white,),
-                  iconSize: 30,
-                  elevation: 16,
-                  underline: Container(
-                    height: 0,
+                width: MediaQuery.of(context).size.width,
+                child: custom.ExpansionTile(
+                  initiallyExpanded: true,
+                  headerBackgroundColor: Colors.black,
+                  iconColor: Colors.red,
+                  title: Text(
+                    'Select An Year',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'Montserrat',
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 3,
+                    ),
                   ),
-                  onChanged: (String newValue) {
-                    setState(() {
-                      dropdownValue = newValue;
-                    });
-                  },
-                  items: <String>['Select Year', '2001', 'Free', 'Four'].map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Padding(
-                        padding: const EdgeInsets.only(right:15.0,top: 10, bottom:10),
-                        child: Row(
-                            children: [
-                          SizedBox(width: 20,),
-                          ElevatedButton(
-                            child: Row(
-                              children: [
-                                Icon(Icons.alternate_email_outlined, color: Colors.red,),
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        top: 20,
+                        left: 30,
+                        right: 30,
+                        bottom: 20,
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                              colors: [
+                                Colors.green,
+                                Colors.black,
+                                Colors.green
                               ],
+                            )),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  isexpanded = !isexpanded;
+                                  decide = employees_2013_14;
+                                });
+                              },
+                              child: Text('2013     -     2014',
+                                  style: TextStyle(
+                                      color: Colors.greenAccent,
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 20,
+                                      letterSpacing: 3,
+                                      fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          Text(value, style: TextStyle(color: Colors.red,fontSize: 20,letterSpacing: 3,fontFamily: 'Montserrat')),
-                        ]),
-                      )
-                    );
-                  }).toList(),
+                          SizedBox(height: 20),
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                              colors: [
+                                Colors.green,
+                                Colors.black,
+                                Colors.green
+                              ],
+                            )),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  decide = employees_2014_16;
+                                });
+                              },
+                              child: Text('2014     -     2016',
+                                  style: TextStyle(
+                                      color: Colors.greenAccent,
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 20,
+                                      letterSpacing: 3,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                              colors: [
+                                Colors.green,
+                                Colors.black,
+                                Colors.green
+                              ],
+                            )),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                              ),
+                              onPressed: () {},
+                              child: Text('2016     -     2017',
+                                  style: TextStyle(
+                                      color: Colors.greenAccent,
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 20,
+                                      letterSpacing: 3,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                              colors: [
+                                Colors.green,
+                                Colors.black,
+                                Colors.green
+                              ],
+                            )),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                              ),
+                              onPressed: () {},
+                              child: Text('2017     -     2018',
+                                  style: TextStyle(
+                                      color: Colors.greenAccent,
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 20,
+                                      letterSpacing: 3,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                              colors: [
+                                Colors.green,
+                                Colors.black,
+                                Colors.green
+                              ],
+                            )),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                              ),
+                              onPressed: () {},
+                              child: Text('2018     -     2019',
+                                  style: TextStyle(
+                                      color: Colors.greenAccent,
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 20,
+                                      letterSpacing: 3,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                              colors: [
+                                Colors.green,
+                                Colors.black,
+                                Colors.green
+                              ],
+                            )),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                              ),
+                              onPressed: () {},
+                              child: Text('2019     -     2020',
+                                  style: TextStyle(
+                                      color: Colors.greenAccent,
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 20,
+                                      letterSpacing: 3,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                          SizedBox(height: 20),
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                              colors: [
+                                Colors.green,
+                                Colors.black,
+                                Colors.green
+                              ],
+                            )),
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.transparent,
+                              ),
+                              onPressed: () {},
+                              child: Text('2020     -     2021',
+                                  style: TextStyle(
+                                      color: Colors.greenAccent,
+                                      fontFamily: 'Montserrat',
+                                      fontSize: 20,
+                                      letterSpacing: 3,
+                                      fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
+            SizedBox(height: 20),
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: ListView.separated(
+                separatorBuilder: (BuildContext context, int index) =>
+                    const Divider(),
+                itemCount: decide.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Stack(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 20.0, bottom: 20.0, left: 20, right: 20),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [Colors.black, Colors.red]
+                            ),
+                            border: Border.all(color: Colors.red),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          height: 90,
+                          width: MediaQuery.of(context).size.width,
+                          child: Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Text(
+                              decide[index]['name'],
+                              textAlign: TextAlign.end,
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontFamily: 'Montserrat',
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 50.0, top: 5),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.greenAccent,
+                            border: Border.all(color: Colors.black, width: 10),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          height: 120,
+                          width:120,
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+            SizedBox(height: 60),
           ],
         ),
       ),
     );
   }
+
+
 }
