@@ -100,219 +100,217 @@ class _HomeState extends State<Home> {
         ],
       ),
       backgroundColor: Colors.black,
-      drawer: Drawer(
-        child: Container(
-          padding: EdgeInsets.only(top: 60.0, bottom: 60.0),
-          color: Colors.black,
-          child: SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                RaisedButton.icon(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    setState(() {
-                      Appbartext = 'Home';
-                      drawerno = 0;
-                    });
-                  },
-                  icon: Icon(Icons.arrow_forward, size: 25.0),
-                  textColor: Colors.red,
-                  color: Colors.black,
-                  label: Padding(
-                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-                    child: Text(
-                      "Home",
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.greenAccent[400],
-                        fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
+      drawer: Theme(
+    data: Theme.of(context).copyWith(
+    canvasColor: Colors.red.withOpacity(0.5), //or any other color you want. e.g Colors.blue.withOpacity(0.5)
+    ),
+    child: Drawer(
+          child: Container(
+            padding: EdgeInsets.only(top: 60.0, bottom: 60.0),
+            child: SafeArea(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  RaisedButton.icon(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      setState(() {
+                        Appbartext = 'Home';
+                        drawerno = 0;
+                      });
+                    },
+                    icon: Icon(Icons.home, size: 25.0),
+                    textColor: Colors.red,
+                    color: Colors.black,
+                    label: Padding(
+                      padding: const EdgeInsets.only(top: 15.0, bottom: 15.0, left:20),
+                      child: Text(
+                        "Home",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.greenAccent[400],
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(10.0),
-                  ),
-                ),
-                Divider(
-                  thickness: 2.0,
-                  color: Colors.red,
-                  height: 20.0,
-                  indent: 50,
-                  endIndent: 50,
-                ),
-                RaisedButton.icon(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    setState(() {
-                      Appbartext = 'Formula Student';
-                      drawerno = 1;
-                    });
-                  },
-                  icon: Icon(Icons.arrow_forward, size: 25.0),
-                  textColor: Colors.red,
-                  color: Colors.black,
-                  label: Padding(
-                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-                    child: Text(
-                      "Formula Student",
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 20.0,
-                        color: Colors.greenAccent[400],
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
-                      ),
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0),
                     ),
                   ),
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(10.0),
+                  Divider(
+                    thickness: 2.0,
+                    color: Colors.black,
+                    height: 20.0,
+                    indent: 50,
+                    endIndent: 50,
                   ),
-                ),
-                Divider(
-                  thickness: 2.0,
-                  color: Colors.red,
-                  height: 20.0,
-                  indent: 50,
-                  endIndent: 50,
-                ),
-                RaisedButton.icon(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    setState(() {
-                      Appbartext = 'Cars';
-                      drawerno = 2;
-                    });
-                  },
-                  icon: Icon(Icons.arrow_forward, size: 25.0),
-                  textColor: Colors.red,
-                  color: Colors.black,
-                  label: Padding(
-                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-                    child: Text(
-                      "Cars",
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 20.0,
-                        color: Colors.greenAccent[400],
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
+                  RaisedButton.icon(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      setState(() {
+                        Appbartext = 'Formula Student';
+                        drawerno = 1;
+                      });
+                    },
+                    icon: Icon(Icons.account_tree_outlined, size: 25.0),
+                    textColor: Colors.red,
+                    color: Colors.black,
+                    label: Padding(
+                      padding: const EdgeInsets.only(top: 15.0, bottom: 15.0, left: 20),
+                      child: Text(
+                        "Formula Student",
+                        style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.greenAccent[400],
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(10.0),
-                  ),
-                ),
-                Divider(
-                  thickness: 2.0,
-                  color: Colors.red,
-                  height: 20.0,
-                  indent: 50,
-                  endIndent: 50,
-                ),
-                RaisedButton.icon(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    setState(() {
-                      Appbartext = 'Our Team';
-                      drawerno = 3;
-                    });
-                  },
-                  icon: Icon(Icons.arrow_forward, size: 25.0),
-                  textColor: Colors.red,
-                  color: Colors.black,
-                  label: Padding(
-                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-                    child: Text(
-                      "Our Team",
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: 20.0,
-                        color: Colors.greenAccent[400],
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
-                      ),
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0),
                     ),
                   ),
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(10.0),
+                  Divider(
+                    thickness: 2.0,
+                    color: Colors.black,
+                    height: 20.0,
+                    indent: 50,
+                    endIndent: 50,
                   ),
-                ),
-                Divider(
-                  thickness: 2.0,
-                  color: Colors.red,
-                  height: 20.0,
-                  indent: 50,
-                  endIndent: 50,
-                ),
-                RaisedButton.icon(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    setState(() {
-                      Appbartext = 'Sponsors';
-                      drawerno = 4;
-                    });
-                  },
-                  icon: Icon(Icons.arrow_forward, size: 25.0),
-                  textColor: Colors.red,
-                  color: Colors.black,
-                  label: Padding(
-                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-                    child: Text(
-                      "Sponsors",
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontFamily: 'Montserrat',
-                        color: Colors.greenAccent[400],
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
+                  RaisedButton.icon(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      setState(() {
+                        Appbartext = 'Cars';
+                        drawerno = 2;
+                      });
+                    },
+                    icon: Icon(Icons.car_repair, size: 25.0),
+                    textColor: Colors.red,
+                    color: Colors.black,
+                    label: Padding(
+                      padding: const EdgeInsets.only(top: 15.0, bottom: 15.0, left: 20),
+                      child: Text(
+                        "Cars",
+                        style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.greenAccent[400],
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(10.0),
-                  ),
-                ),
-                Divider(
-                  thickness: 2.0,
-                  color: Colors.red,
-                  height: 20.0,
-                  indent: 50,
-                  endIndent: 50,
-                ),
-                RaisedButton.icon(
-                  onPressed: () {
-                    Navigator.pop(context);
-                    setState(() {
-                      Appbartext = 'Support Us!';
-                      drawerno = 5;
-                    });
-                  },
-                  icon: Icon(Icons.arrow_forward, size: 25.0),
-                  textColor: Colors.red,
-                  color: Colors.black,
-                  label: Padding(
-                    padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
-                    child: Text(
-                      "Support Us",
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.greenAccent[400],
-                        fontFamily: 'Montserrat',
-                        fontWeight: FontWeight.bold,
-                        fontStyle: FontStyle.italic,
-                      ),
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0),
                     ),
                   ),
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(10.0),
+                  Divider(
+                    thickness: 2.0,
+                    color: Colors.black,
+                    height: 20.0,
+                    indent: 50,
+                    endIndent: 50,
                   ),
-                ),
-              ],
+                  RaisedButton.icon(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      setState(() {
+                        Appbartext = 'Our Team';
+                        drawerno = 3;
+                      });
+                    },
+                    icon: Icon(Icons.people_outline, size: 25.0),
+                    textColor: Colors.red,
+                    color: Colors.black,
+                    label: Padding(
+                      padding: const EdgeInsets.only(top: 15.0, bottom: 15.0,left: 20),
+                      child: Text(
+                        "Our Team",
+                        style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontSize: 20.0,
+                          color: Colors.greenAccent[400],
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  Divider(
+                    thickness: 2.0,
+                    color: Colors.black,
+                    height: 20.0,
+                    indent: 50,
+                    endIndent: 50,
+                  ),
+                  RaisedButton.icon(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      setState(() {
+                        Appbartext = 'Sponsors';
+                        drawerno = 4;
+                      });
+                    },
+                    icon: Icon(Icons.monetization_on_outlined, size: 25.0),
+                    textColor: Colors.red,
+                    color: Colors.black,
+                    label: Padding(
+                      padding: const EdgeInsets.only(top: 15.0, bottom: 15.0, left: 20),
+                      child: Text(
+                        "Sponsors",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontFamily: 'Montserrat',
+                          color: Colors.greenAccent[400],
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  Divider(
+                    thickness: 2.0,
+                    color: Colors.black,
+                    height: 20.0,
+                    indent: 50,
+                    endIndent: 50,
+                  ),
+                  RaisedButton.icon(
+                    onPressed: () {
+                      Navigator.pop(context);
+                      setState(() {
+                        Appbartext = 'Support Us!';
+                        drawerno = 5;
+                      });
+                    },
+                    icon: Icon(Icons.help, size: 25.0),
+                    textColor: Colors.red,
+                    color: Colors.black,
+                    label: Padding(
+                      padding: const EdgeInsets.only(top: 15.0, bottom: 15.0, left: 20),
+                      child: Text(
+                        "Support Us",
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.greenAccent[400],
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(10.0),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

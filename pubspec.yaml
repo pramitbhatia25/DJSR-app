@@ -61,6 +61,12 @@ flutter:
     - lib/images/formulastudenttitle.jpg
     - lib/images/supportimages/brochure.JPG
     - lib/images/formulastudent.jpg
+    - lib/images/img1.jpeg
+    - lib/images/img2.jpeg
+    - lib/images/img3.jpeg
+    - lib/images/img4.jpeg
+    - lib/images/img5.jpeg
+    - lib/images/img6.jpeg
     - lib/images/djscars/djs01.JPG
     - lib/images/djscars/djs02.JPG
     - lib/images/djscars/djs03.JPG

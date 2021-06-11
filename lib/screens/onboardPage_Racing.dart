@@ -83,20 +83,23 @@ class _RacingState extends State<Racing> {
                         Container(
                           height:MediaQuery.of(context).size.height*0.7,
                           width: MediaQuery.of(context).size.width*0.9,
-                          margin: EdgeInsets.only(top:15.0, bottom: 15.0, right: 5.0, left: 5.0 ),
+                          margin: EdgeInsets.only(top:15.0, bottom: 15.0, right: 15.0, left: 15.0 ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(30),
                             border: Border.all(color: Colors.red),
                           ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(30),
-                            child: Image.asset(
-                              onboardpaintings[i]['image'],
-                              height: 100,
-                              width: 100,
-                              fit: BoxFit.cover,
-                              alignment:
-                              Alignment(-pageOffset.abs() + i, 0),
+                          child: Transform.scale(
+                            scale: .9,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(30),
+                              child: Image.asset(
+                                onboardpaintings[i]['image'],
+                                height: onboardpaintings[i]['height'].toDouble(),
+                                width: 100,
+                                fit: BoxFit.cover,
+                                alignment:
+                                Alignment(-pageOffset.abs() + i, 0),
+                              ),
                             ),
                           ),
                         ),
