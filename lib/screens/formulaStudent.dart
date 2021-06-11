@@ -92,18 +92,19 @@ class _formulaState extends State<formula> {
                   ),
                   Text(
                     "\nThe world’s biggest competition for engineers is HERE! \n\nEvery year, Formula Student competitions are held all across the globe. Founded by the Society of Automotive Engineers in 1981, the first competition in Europe took place in 1998. At present, there are more than 600 teams from universities all over the world competing with their self-constructed race cars. \n\nThe goal? To develop and provide a platform for student engineers to experience, build, and learn. It offers a unique way to test students’ theoretical knowledge in a practical context. \n\nStudents gain and develop skills such as engineering, project management and team work. The winner is not necessarily the team with the fastest car, but the one with the best package regarding construction, performance, financial planning and sales arguments.",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       color:Colors.white,
                       height: 1.375,
                       fontFamily: 'Montserrat',
                       letterSpacing: 1.0,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                     ),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
             Container(
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(

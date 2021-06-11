@@ -9,6 +9,7 @@ import 'package:scroll_app_bar/scroll_app_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'screens/onboardPage_Racing.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 PageController pageController;
 double pageOffset = 0;
@@ -70,9 +71,22 @@ class _HomeState extends State<Home> {
         elevation: 0.0,
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.settings, color: Colors.red),
+              icon: FaIcon(FontAwesomeIcons.instagram),
               color: Colors.red,
-              iconSize: 30.0,
+              iconSize: 25.0,
+              onPressed: () async {
+                const url = 'https://www.instagram.com/djs_racing/?hl=en';
+                if (await canLaunch(url)) {
+                  await launch(url);
+                } else {
+                  throw 'Could not launch $url';
+                }
+              }
+          ),
+          IconButton(
+              icon: FaIcon(FontAwesomeIcons.chrome),
+              color: Colors.red,
+              iconSize: 25.0,
               onPressed: () async {
                 const url = 'https://www.djs-racing.com';
                 if (await canLaunch(url)) {

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "288213598179",
+    "project_id": "djsrapp-22297",
+    "storage_bucket": "djsrapp-22297.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288213598179:android:97b8dbfe4964b4569bead6",
+        "android_client_info": {
+          "package_name": "com.djapp.DJSRacing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288213598179-89ddfcpn5na7cdlqmjja5id2d5j8fnnh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrSKw7D-C_UGUcDwfWtWKNwi2L5UnltOs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288213598179-89ddfcpn5na7cdlqmjja5id2d5j8fnnh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

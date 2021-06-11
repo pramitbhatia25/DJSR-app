@@ -27,9 +27,6 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-
-
-
   @override
   Widget build(BuildContext context) {
       return SingleChildScrollView(
@@ -80,21 +77,6 @@ class _HomePageState extends State<HomePage> {
                                   (index) => buildDot(index: index),
                             ),
                           ),
-                          // Positioned(if text needed under pics
-                          //   left: paintings[i]['left'],
-                          //   bottom: paintings[i]['bottom'],
-                          //   right: paintings[i]['right'],
-                          //   child: Text(
-                          //     paintings[i]['name'],
-                          //     style: TextStyle(
-                          //       fontFamily: 'Montserrat',
-                          //       color: Colors.white,
-                          //       fontSize: paintings[i]['size'],
-                          //       fontWeight: FontWeight.bold,
-                          //       fontStyle: FontStyle.italic,
-                          //     ),
-                          //   ),
-                          // )
                         ],
                       ),
                     ),
@@ -122,15 +104,18 @@ class _HomePageState extends State<HomePage> {
               indent: 50,
               endIndent: 50,
             ),
-            Text(
-              "DJS Racing is the Formula Student team of Dwarkadas J. Sanghvi College of Engineering, Vile Parle, Mumbai.\n\nWe are a team of 120 students representing our college at Formula Student Competitions in India as well as abroad, where we design / manufacture Formula style race-car prototypes.\n\nSince the year 2012, our team has been constantly pushing the limits in the field of combustion.\n\nThe world is changing, and with companies making strides towards sustainable development, we at DJSRacing embrace change, and have thus made the decision to go fully electric from this season.",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color:Colors.white,
-                height: 1.25,
-                fontFamily: 'Montserrat',
-                letterSpacing: 1.0,
-                fontSize: 18.0,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "DJS Racing is the Formula Student team of Dwarkadas J. Sanghvi College of Engineering, Vile Parle, Mumbai.\n\nWe are a team of 120 students representing our college at Formula Student Competitions in India as well as abroad, where we design / manufacture Formula style race-car prototypes.\n\nSince the year 2012, our team has been constantly pushing the limits in the field of combustion.\n\nThe world is changing, and with companies making strides towards sustainable development, we at DJSRacing embrace change, and have thus made the decision to go fully electric from this season.",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color:Colors.white,
+                  height: 1.25,
+                  fontFamily: 'Montserrat',
+                  letterSpacing: 1.0,
+                  fontSize: 16.0,
+                ),
               ),
             ),
             SizedBox(height:40.0),
@@ -146,6 +131,18 @@ class _HomePageState extends State<HomePage> {
               child:Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
+                  // YoutubePlayer(
+                  //   controller: _controller,
+                  //   aspectRatio: 16/9,
+                  //   showVideoProgressIndicator: true,
+                  //   progressColors: ProgressBarColors(
+                  //     playedColor: Colors.white,
+                  //     handleColor: Colors.green,
+                  //   ),
+                  //   onReady: () {
+                  //     _controller.addListener(listener);
+                  //   },
+                  // ),
                 ],
               ),
             ),

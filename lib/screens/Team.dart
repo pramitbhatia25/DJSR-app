@@ -273,9 +273,9 @@ class _TeamState extends State<Team> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
             Container(
-              height: MediaQuery.of(context).size.height +100,
+              height: MediaQuery.of(context).size.height - 200,
               width: MediaQuery.of(context).size.width,
               child: ListView.separated(
                 separatorBuilder: (BuildContext context, int index) =>
@@ -290,7 +290,7 @@ class _TeamState extends State<Team> {
                         child: Container(
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
-                              colors: [Colors.black, Colors.red]
+                              colors: [Colors.black,Colors.red,  Colors.red]
                             ),
                             border: Border.all(color: Colors.red),
                             borderRadius: BorderRadius.circular(20),
@@ -298,22 +298,22 @@ class _TeamState extends State<Team> {
                           height: 90,
                           width: MediaQuery.of(context).size.width,
                           child: Padding(
-                            padding: const EdgeInsets.all(15.0),
+                            padding: const EdgeInsets.only(top:15.0, left: 20,right: 5, bottom: 15),
                             child: Text(
                               decide[index]['name'],
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 color: Colors.black,
-                                fontFamily: 'Montserrat',
-                                fontSize: 20,
+                                letterSpacing: 1,
                                 fontWeight: FontWeight.bold,
+                                fontSize: 16,
                               ),
                             ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 30.0, top: 5),
+                        padding: const EdgeInsets.only(left: 25.0, top: 5),
                         child: Container(
                           decoration: BoxDecoration(
                             color: Colors.greenAccent,
